@@ -20,3 +20,14 @@ assign letter=E       ← 指定磁碟代號（可改成你想要的）
 
 exit
 ```
+----------------------------
+# SD card
+diskpart
+list disk
+select disk 2
+clean
+convert mbr
+create partition primary size=30000
+format fs=fat32 quick
+assign
+exit
